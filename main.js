@@ -10,4 +10,4 @@ list.append("snake");
 list.prepend("turtle");
 
 
-console.log(list.pop());
+console.log(list.contains('hamsster'));

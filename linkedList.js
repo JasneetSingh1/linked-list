@@ -73,6 +73,16 @@ class LinkedList {
     this.tail = start;
     return popped;
   }
+
+  contains(value){
+    let start = this.head;
+    while (start != null) {
+      if(start.value == value) return true;
+      start = start.nextNode;
+      
+    }
+    return false;
+  }
 }
 
 export { LinkedList };
