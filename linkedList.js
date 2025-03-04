@@ -62,26 +62,37 @@ class LinkedList {
     return result;
   }
 
-  pop(){
+  pop() {
     let start = this.head;
-    while(start.nextNode != this.tail){
-        start = start.nextNode;
+    while (start.nextNode != this.tail) {
+      start = start.nextNode;
     }
-    
+
     let popped = start.nextNode;
     start.nextNode = null;
     this.tail = start;
     return popped;
   }
 
-  contains(value){
+  contains(value) {
     let start = this.head;
     while (start != null) {
-      if(start.value == value) return true;
+      if (start.value == value) return true;
       start = start.nextNode;
-      
     }
     return false;
+  }
+
+  find(value) {
+    let start = this.head;
+    let count = 0;
+    while (start != null) {
+     
+      if (start.value == value) return count;
+      count++;
+      start = start.nextNode;
+    }
+    return null;
   }
 }
 

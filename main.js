@@ -7,7 +7,7 @@ list.append("cat");
 list.append("parrot");
 list.append("hamster");
 list.append("snake");
-list.prepend("turtle");
+list.append("turtle");
 
 
-console.log(list.contains('hamsster'));
+console.log(list.find('hamster'));
