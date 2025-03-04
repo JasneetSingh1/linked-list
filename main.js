@@ -9,6 +9,10 @@ list.append("hamster");
 list.append("snake");
 list.append("turtle");
 
+// console.log(list.toString());
+// list.insertAt('lion', 4);
+console.log(list.size());
 console.log(list.toString());
-console.log(list.insertAt('lion', 6));
+list.removeAt(4);
+list.removeAt(4);
 console.log(list.toString());

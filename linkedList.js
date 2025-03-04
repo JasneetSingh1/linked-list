@@ -105,19 +105,51 @@ class LinkedList {
     return result;
   }
 
-  insertAt(value, index){
+  insertAt(value, index) {
     let before = this.head;
-
-    for (let i = 0; i < index -1; i++) {
+    let size = this.size() - 1;
+    if (index > size) return  console.log("Index out of bounds");
+    if(index == 0){
+        this.prepend(value);
+        return;
+    }
+    if(index == size){
+        this.append(value);
+        return;
+    }
+   
+    for (let i = 0; i < index - 1; i++) {
+        
         if (before != null) {
-          before = before.nextNode;
-        }
+        before = before.nextNode;
       }
-    let after = before.nextNode.nextNode;
+    }
+    let after = before.nextNode;
     let newNode = new Node(value);
     before.nextNode = newNode;
     newNode.nextNode = after;
+  }
 
+  removeAt(index) {
+    let before = this.head;
+    let size = this.size() - 1;
+    if (index > size) return console.log("Index out of bounds");
+    if(index == 0){
+        this.head = before.nextNode;
+        return;
+    }
+    if(index == size){
+        this.pop();
+        return;
+    }
+    for (let i = 0; i < index - 1; i++) {
+      if (before != null) {
+        before = before.nextNode;
+      }
+    }
+    let after = before.nextNode.nextNode;
+
+    before.nextNode = after;
   }
 }
 export { LinkedList };
