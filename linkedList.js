@@ -53,7 +53,7 @@ class LinkedList {
 
   getAt(index) {
     let result = this.head;
-    for (let i = 0; i <= index; i++) {
+    for (let i = 0; i < index; i++) {
       if (result != null) {
         result = result.nextNode;
       }
@@ -103,6 +103,21 @@ class LinkedList {
     }
     result = result + "null";
     return result;
+  }
+
+  insertAt(value, index){
+    let before = this.head;
+
+    for (let i = 0; i < index -1; i++) {
+        if (before != null) {
+          before = before.nextNode;
+        }
+      }
+    let after = before.nextNode.nextNode;
+    let newNode = new Node(value);
+    before.nextNode = newNode;
+    newNode.nextNode = after;
+
   }
 }
 export { LinkedList };
