@@ -87,13 +87,22 @@ class LinkedList {
     let start = this.head;
     let count = 0;
     while (start != null) {
-     
       if (start.value == value) return count;
       count++;
       start = start.nextNode;
     }
     return null;
   }
-}
 
+  toString() {
+    let result = " ";
+    let start = this.head;
+    while (start != null) {
+      result = result + `( ${start.value} ) -> `;
+      start = start.nextNode;
+    }
+    result = result + "null";
+    return result;
+  }
+}
 export { LinkedList };

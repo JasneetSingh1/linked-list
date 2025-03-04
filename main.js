@@ -10,4 +10,4 @@ list.append("snake");
 list.append("turtle");
 
 
-console.log(list.find('hamster'));
+console.log(list.toString());
