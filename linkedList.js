@@ -61,6 +61,18 @@ class LinkedList {
 
     return result;
   }
+
+  pop(){
+    let start = this.head;
+    while(start.nextNode != this.tail){
+        start = start.nextNode;
+    }
+    
+    let popped = start.nextNode;
+    start.nextNode = null;
+    this.tail = start;
+    return popped;
+  }
 }
 
 export { LinkedList };

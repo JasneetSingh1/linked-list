@@ -10,4 +10,4 @@ list.append("snake");
 list.prepend("turtle");
 
 
-console.log(list.getAt(2));
+console.log(list.pop());
