@@ -7,7 +7,7 @@ list.append("cat");
 list.append("parrot");
 list.append("hamster");
 list.append("snake");
-list.append("turtle");
+list.prepend("turtle");
 
 
-console.log(list.size());
+console.log(list.getHead());
