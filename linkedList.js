@@ -28,6 +28,19 @@ class LinkedList{
     getTail(){
         return this.tail;
     }
+
+    size(){
+        let count = 0;
+        if(this.head == null) return 0;
+
+        let start = this.head;
+        while(start != null){
+            start = start.nextNode;
+            count++;
+        }
+
+        return count;
+    }
 }
 
 

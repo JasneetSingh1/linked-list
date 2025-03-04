@@ -8,5 +8,6 @@ list.append("parrot");
 list.append("hamster");
 list.append("snake");
 list.append("turtle");
-console.log(list.getHead());
-console.log(list.getTail());
+
+
+console.log(list.size());
